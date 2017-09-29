@@ -13,4 +13,12 @@
 | en él para notificar los clics sobre los posts.                          |
 |========================================================================-->
 
-<app-post-preview *ngFor="let post of posts" [post]="post"></app-post-preview>
+<!--
+    al hacer click en un post hijo, se lanza el evento 'postClickado',
+    que capturamos aquí para lanzar el método 'mostrarPost'.
+-->
+<app-post-preview 
+    *ngFor="let post of posts"
+    [post]="post"
+    (postClickado)="mostrarPost($event)"
+></app-post-preview>
