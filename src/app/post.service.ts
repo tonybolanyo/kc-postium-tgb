@@ -104,7 +104,24 @@ export class PostService {
     | Una pista más, por si acaso: HttpParams.                                 |
     |=========================================================================*/
 
-     return this._http.get<Post[]>(`${environment.backendUri}/posts`);
+    // primero las opciones que sí que ofrece JSON Server
+    // orden y filtro por fecha de publicación
+    const options = {
+      params: new HttpParams()
+        .set('_sort', 'publicationDate')
+        .set('_order', 'desc')
+        .set('publicationDate_lte', Date.now().toString())
+    };
+
+    return this._http
+      .get<Post[]>(`${environment.backendUri}/posts`, options)
+      // con map creamos un nuevo array de resultados
+      // aplicando un filtro de forma que el post se incluye en el resultado
+      // si algún elemento del array de categorías tiene el ID indicado
+      .map(posts => {
+        return posts.filter(post =>
+          post.categories.some((category) => category.id == id));
+      });
   }
 
   getPostDetails(id: number): Observable<Post> {
