@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
  |----------------------------------------------------------|
  | Importa FromNowPipe para poder usarlo en este documento. |
  |----------------------------------------------------------*/
+import { FromNowPipe } from './from-now.pipe';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -52,6 +53,7 @@ import { UserService } from './user.service';
     AppComponent,
     AutoGrowDirective,
     CategoryBoxComponent,
+    FromNowPipe,
     HeaderBarComponent,
     NewStoryComponent,
     PostDetailsComponent,
