@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { Category } from '../category';
 
@@ -21,4 +21,9 @@ export class CategoryBoxComponent {
   | además, un manejador para el mismo.                                      |
   |=========================================================================*/
 
+  @Output() categoryClicked = new EventEmitter<Category>();
+
+  notifyCategoryClicked(category: Category) {
+    this.categoryClicked.emit(category);
+  }
 }
