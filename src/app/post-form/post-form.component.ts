@@ -41,7 +41,6 @@ export class PostFormComponent {
 
   emitPostSubmitted(): void {
     const post: Post = this.postForm.value;
-    console.log('post:', post);
     post.likes = [];
     post.categories = [];
     post.author = this._userService.getDefaultUser();
