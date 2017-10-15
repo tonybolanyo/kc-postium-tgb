@@ -1,0 +1,9 @@
+<div class="search-results">
+  <h2 [ngPlural]="posts.length">
+    <template ngPluralCase="0">No he encontrado ningún resultado</template>
+    <template ngPluralCase="1">Solamente se encontró un artículo</template>
+    <template ngPluralCase="other">Se encontraron {{ posts.length }} resultados</template>
+    para <i>{{ query }}</i>
+  </h2>
+  <app-posts-list [posts]="posts"></app-posts-list>
+</div>

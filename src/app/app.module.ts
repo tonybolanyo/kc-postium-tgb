@@ -34,6 +34,7 @@ import { PostService } from './post.service';
 import { SearchBoxComponent } from './search-box/search-box.component';
 import { UserService } from './user.service';
 import { EditStoryComponent } from './edit-story/edit-story.component';
+import { SearchResultsComponent } from './search-results/search-results.component';
 
 @NgModule({
   imports: [
@@ -65,7 +66,8 @@ import { EditStoryComponent } from './edit-story/edit-story.component';
     PostsListComponent,
     PostsViewComponent,
     SearchBoxComponent,
-    EditStoryComponent
+    EditStoryComponent,
+    SearchResultsComponent
   ],
   providers: [
     CategoryResolveService,

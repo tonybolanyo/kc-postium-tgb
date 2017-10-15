@@ -10,6 +10,7 @@ import { PostsByCategoryComponent } from './posts-by-category/posts-by-category.
 import { PostsByAuthorComponent } from './posts-by-author/posts-by-author.component';
 import { PostsViewComponent } from './posts-view/posts-view.component';
 import { EditStoryComponent } from './edit-story/edit-story.component';
+import { SearchResultsComponent } from './search-results/search-results.component';
 
 @NgModule({
   imports: [
@@ -31,6 +32,12 @@ import { EditStoryComponent } from './edit-story/edit-story.component';
       resolve: {
         posts: PostsResolveService,
         category: CategoryResolveService
+      }
+    }, {
+      path: 'posts/search/:query',
+      component: SearchResultsComponent,
+      resolve: {
+        posts: PostsResolveService
       }
     }, {
       path: 'new-story',

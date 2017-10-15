@@ -153,9 +153,20 @@ export class PostService {
     | práctica retornar la misma con los datos actualizados.                   |
     |=========================================================================*/
 
-    console.log('ruta:', `${environment.backendUri}/posts/${post.id}`);
-    console.log('datos', post);
     return this._http.patch<Post>(`${environment.backendUri}/posts/${post.id}`, post);
+  }
+
+  searchPosts(query: string) {
+    const options = {
+      params: new HttpParams()
+        .set('_sort', 'publicationDate')
+        .set('_order', 'desc')
+        .set('publicationDate_lte', Date.now().toString())
+        .set('q', query)
+    };
+
+    return this._http
+      .get<Post[]>(`${environment.backendUri}/posts`, options);
   }
 
 }
