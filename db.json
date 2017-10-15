@@ -296,6 +296,22 @@
       },
       "publicationDate": 1507929564449,
       "id": 11
+    },
+    {
+      "title": "El valor de x se establece en 5 de una vez por todas",
+      "intro": "LA MEDIDA PERMITIRÁ AHORRAR MILLONES DE CÁLCULOS AL AÑO",
+      "body": "El mundialmente conocido Instituto Max Planck de Matemáticas ha establecido hoy que el valor de x, objeto de innumerables cálculos matemáticos, será siempre 5. Los expertos estiman que esta medida puede ahorrar hasta mil millones de horas de cálculos al año en todo el mundo.\n\n“Durante décadas, generaciones de estudiantes, físicos y matemáticos se han esforzado por determinar el valor de x una y otra vez”, dice el profesor Benedikt Rascop del Instituto Max Planck. “Tan pronto como conseguían dar con él, volvían a empezar de cero en el siguiente cálculo”, añade.\n\nPara remediar esta situación, el instituto ha recogido los resultados de x en miles de cálculos realizados en los últimos 100 años, estableciendo como media el valor 5.149.291. “Como es una cifra muy compleja, la redondeamos a 5”, dice Rascop. Además, los científicos han fijado los valores definitivos de las letras a (1), b (3), c (10), y (2) y z (29).\n\nPuesto que ya se ha despejado el valor de la incógnita de forma definitiva, las horas lectivas de la asignatura de matemáticas en Alemania se reducirán a una a partir del quinto grado en adelante y el resto se dedicará a temas más relevantes. Numerosos matemáticos y científicos temen ahora por sus trabajos.",
+      "likes": [],
+      "categories": [],
+      "author": {
+        "id": 1,
+        "name": "KeepCoder",
+        "username": "keepcoder",
+        "email": "keepcoder@postium.com",
+        "avatar": "assets/images/keepcoder.jpg"
+      },
+      "publicationDate": 1508079113128,
+      "id": 12
     }
   ],
   "categories": [
