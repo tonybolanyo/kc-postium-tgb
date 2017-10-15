@@ -41,7 +41,7 @@ export class PostsListComponent {
   | app. La ruta a navegar es '/posts', pasando como parámetro el            |
   | identificador del post.                                                  |
   |=========================================================================*/
-  mostrarPost(post: Post): void {
+  showPost(post: Post): void {
     // navigate permite nevegar a una ruta definida
     // como la ruta está parametrizada, en el vector
     // con los parámetros incluimos primero la ruta

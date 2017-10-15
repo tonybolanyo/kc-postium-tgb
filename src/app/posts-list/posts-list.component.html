@@ -14,12 +14,12 @@
 |========================================================================-->
 
 <!--
-    al hacer click en un post hijo, se lanza el evento 'postClickado',
-    que capturamos aquí para lanzar el método 'mostrarPost'.
+    al hacer click en un post hijo, se lanza el evento 'postClicked',
+    que capturamos aquí para lanzar el método 'showPost'.
 -->
 <app-post-preview 
     *ngFor="let post of posts"
     [post]="post"
-    (postClickado)="mostrarPost($event)"
-    (autorClickado)="navigateUserPosts($event)"
+    (postClicked)="showPost($event)"
+    (authorClicked)="navigateUserPosts($event)"
 ></app-post-preview>

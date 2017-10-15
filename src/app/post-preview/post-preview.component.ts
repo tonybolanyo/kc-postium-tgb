@@ -25,7 +25,7 @@ export class PostPreviewComponent {
   // Emisor de eventos que permite notificar cuando se ha hecho click
   // sobre el nombre del autor de un post. En la emisión se envía la
   // información del autor.
-  @Output() autorClickado = new EventEmitter<User>();
+  @Output() authorClicked = new EventEmitter<User>();
 
   /*=========================================================================|
   | Green Path                                                               |
@@ -40,20 +40,20 @@ export class PostPreviewComponent {
   // Este emisor de eventos permite notificar cuando
   // se ha hecho click sobre un post. Contiene la información
   // del post que ha sido clickado.
-  @Output() postClickado = new EventEmitter<Post>();
+  @Output() postClicked = new EventEmitter<Post>();
 
   // Este método se ejecuta cuando se realiza el click sobre un post en la plantilla
   // y se encarga de emitir el evento de notificación.
-  notificarPostClickado(post: Post): void {
-    this.postClickado.emit(post);
+  notifyPostClicked(post: Post): void {
+    this.postClicked.emit(post);
 
   }
 
   /* Red path */
   // Este método se ejecuta cuando se realiza click sobre el autor de un post en la plantilla
   // y se encarga de emitir el evento de notificacion a todos los suscriptores
-  notificarAutorClickado(user: User): void {
-    this.autorClickado.emit(user);
+  notifyAuthorClicked(user: User): void {
+    this.authorClicked.emit(user);
   }
 
   plainTextToHtml(text: string): string {
