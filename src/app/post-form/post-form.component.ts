@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, Input, OnChanges } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 import { Post } from '../post';
@@ -10,15 +10,22 @@ import { UserService } from '../user.service';
   templateUrl: './post-form.component.html',
   styleUrls: ['./post-form.component.css']
 })
-export class PostFormComponent {
+export class PostFormComponent implements OnChanges {
 
   postForm: FormGroup;
 
   @Output() postSubmitted: EventEmitter<Post> = new EventEmitter();
 
+  // Para reutilizar el formulario es necesario que podamos establecer
+  // el valor del post a editar. Para eso el componente padre debe poder
+  // enviarle los datos al componente formulario. Para esto creo un atributo
+  // en la clase decorado con Input. Este atributo estará enlazado en
+  // el template del padre al crear el componente del formulario.
+  @Input() post: Post;
+
   constructor(
     private _userService: UserService,
-    private _formBuilder: FormBuilder) {
+    private _formBuilder: FormBuilder,) {
       this.createForm();
     }
 
@@ -46,6 +53,18 @@ export class PostFormComponent {
     post.author = this._userService.getDefaultUser();
     post.publicationDate = Date.now();
     this.postSubmitted.emit(post);
+  }
+
+  // Necesario al implementar 'OnChanges'. Este evento nos permite
+  // capturar los cambios en post y establecer correctamente el
+  // valor de los campos del formulario con los datos del post
+  // que está siendo editado.
+  ngOnChanges() {
+    this.postForm.setValue({
+      title: this.post.title,
+      intro: this.post.intro,
+      body: this.post.body
+    });
   }
 
 }

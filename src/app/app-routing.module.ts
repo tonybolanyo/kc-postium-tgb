@@ -37,7 +37,10 @@ import { EditStoryComponent } from './edit-story/edit-story.component';
       component: NewStoryComponent
     }, {
       path: 'posts/:postId/edit',
-      component: EditStoryComponent
+      component: EditStoryComponent,
+      resolve: {
+        post: PostDetailsResolveService
+      }
     }, {
       path: 'posts/:postId',
       component: PostDetailsComponent,
