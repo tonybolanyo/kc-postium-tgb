@@ -326,8 +326,24 @@
         "email": "keepcoder@postium.com",
         "avatar": "assets/images/keepcoder.jpg"
       },
-      "publicationDate": 1508082031618,
+      "publicationDate": 1508085459621,
       "id": 13
+    },
+    {
+      "title": "La NASA descubre un agujero verde que sólo absorbe planetas orgánicos",
+      "intro": "PODRÍA TRATARSE DE UN PLANETA VEGANO",
+      "body": "Tras observar un agujero negro que sólo ejerce fuerza de atracción sobre unos planetas y no sobre otros, diversos especialistas en astrofísica han concluido que podría tratarse de una estrella verde muerta que sólo está interesada en los planetas y cuerpos celeste orgánicos y que albergan vida. “Sólo le interesan los planetas de proximidad y que tengan posibilidad de tener vida orgánica saludable”, confirma Philip Feces, portavoz oficial de la NASA.\n\nLa fuerza de gravedad de este agujero es exactamente igual a la de los agujeros negros, la única diferencia es que no ejerce esa atracción hacia cuerpos celestes que no albergan vida. “En el momento en el que absorbe los planetas a su interior, todos se convierten en planetas ‘kilómetro cero’ porque en su interior se curva el espacio-tiempo”, explica Feces.\n\nLa NASA tampoco descarta que este agujero verde esté absorbiendo planetas de cristal con la intención de reciclarlos posteriormente en otro punto de la galaxia. Los telescopios también han descubierto un sistema solar vecino que arroja todo tipo de planetas y satélites a ese agujero verde para no desplazarse hasta el agujero negro más cercano.",
+      "likes": [],
+      "categories": [],
+      "author": {
+        "id": 1,
+        "name": "KeepCoder",
+        "username": "keepcoder",
+        "email": "keepcoder@postium.com",
+        "avatar": "assets/images/keepcoder.jpg"
+      },
+      "publicationDate": 1508086647673,
+      "id": 14
     }
   ],
   "categories": [

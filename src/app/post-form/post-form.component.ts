@@ -47,10 +47,25 @@ export class PostFormComponent implements OnChanges {
   }
 
   emitPostSubmitted(): void {
+    /*=========================================================================|
+    | Broken White Path                                                        |
+    |==========================================================================|
+    | Debemos tratar diferente la creación de un post o la edición.            |
+    |=========================================================================*/
     const post: Post = this.postForm.value;
-    post.likes = [];
-    post.categories = [];
-    post.author = this._userService.getDefaultUser();
+    if (this.post) {
+      // solamente si estamos editando tendremos datos
+      // en el atributo post, debemos usarlos
+      post.id = this.post.id;
+      post.likes = this.post.likes;
+      post.categories = this.post.categories;
+      post.author = this.post.author;
+    } else {
+      // si es un nuevo post, this.post será undefined
+      post.likes = [];
+      post.categories = [];
+      post.author = this._userService.getDefaultUser();
+    }
     post.publicationDate = Date.now();
     this.postSubmitted.emit(post);
   }
@@ -60,7 +75,7 @@ export class PostFormComponent implements OnChanges {
   // valor de los campos del formulario con los datos del post
   // que está siendo editado.
   ngOnChanges() {
-    this.postForm.setValue({
+    this.postForm.reset({
       title: this.post.title,
       intro: this.post.intro,
       body: this.post.body

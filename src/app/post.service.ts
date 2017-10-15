@@ -143,4 +143,19 @@ export class PostService {
     return this._http.post<Post>(`${environment.backendUri}/posts`, post);
   }
 
+  updatePost(post: Post): Observable<Post> {
+    /*=========================================================================|
+    | Broken White Path                                                        |
+    |==========================================================================|
+    | Utiliza el cliente HTTP para guarder en servidor el post indicado. La    |
+    | ruta sobre la cual se debe hacer la petición POST es '/posts/:postId'.   |
+    | Recuerda que siempre que se crea una entidad en servidor es una buena    |
+    | práctica retornar la misma con los datos actualizados.                   |
+    |=========================================================================*/
+
+    console.log('ruta:', `${environment.backendUri}/posts/${post.id}`);
+    console.log('datos', post);
+    return this._http.patch<Post>(`${environment.backendUri}/posts/${post.id}`, post);
+  }
+
 }
