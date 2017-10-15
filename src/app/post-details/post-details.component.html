@@ -22,6 +22,17 @@
 
     </div>
   </div>
+  <!--=======================================================================|
+  | Broken White Path                                                        |
+  |==========================================================================|
+  | Agregado botón para edición del post.                                    |
+  |========================================================================-->
+  <div class="u-pull-right">
+    <a routerLink="/posts/{{ post.id }}/edit" class="button button-primary">
+      <i class="fa fa-pencil" aria-hidden="true"></i>
+      Editar
+    </a>
+  </div>
 </div>
 <div class="post">
   <h3>{{ post.title }}</h3>
@@ -39,5 +50,5 @@
   <app-category-box
     [categories]="post.categories"
     (categoryClicked)="navigateCategoryPosts($event)"></app-category-box>
-
+  
 </div>
